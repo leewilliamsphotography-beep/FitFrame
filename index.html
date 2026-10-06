@@ -31,27 +31,27 @@
 
         body { background-color: var(--bg); color: var(--text); min-height: 100vh; display: flex; flex-direction: column; align-items: center; transition: background-color 0.3s ease, color 0.3s ease; }
 
-        nav { width: 100%; max-width: 1280px; padding: 1.25rem 2rem; display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid var(--border); background: var(--bg); position: sticky; top: 0; z-index: 100; backdrop-filter: blur(12px); }
+        nav { width: 100%; max-width: 1280px; padding: 1.25rem 1rem; display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid var(--border); background: var(--bg); position: sticky; top: 0; z-index: 100; backdrop-filter: blur(12px); }
         .brand { display: flex; align-items: center; gap: 0.75rem; }
         .logo-svg { width: 28px; height: 28px; }
         .brand-name { font-size: 1.1rem; font-weight: 700; letter-spacing: -0.02em; color: var(--text); }
         .theme-toggle { background: transparent; border: 1px solid var(--border); width: 36px; height: 36px; border-radius: 8px; cursor: pointer; display: flex; align-items: center; justify-content: center; color: var(--text-secondary); transition: all 0.2s; }
         .theme-toggle:hover { border-color: var(--text); color: var(--text); }
 
-        header { text-align: center; padding: 5rem 2rem 4rem; max-width: 900px; }
-        header h1 { font-family: 'Instrument Serif', serif; font-size: 4.5rem; font-weight: 400; line-height: 1; letter-spacing: -0.04em; margin-bottom: 1.5rem; color: var(--text); }
+        header { text-align: center; padding: 4rem 1rem 3rem; max-width: 900px; }
+        header h1 { font-family: 'Instrument Serif', serif; font-size: 3.5rem; font-weight: 400; line-height: 1; letter-spacing: -0.04em; margin-bottom: 1.5rem; color: var(--text); }
         header h1 em { font-style: italic; color: var(--accent); }
-        header p { color: var(--muted); font-size: 1.1rem; line-height: 1.6; max-width: 600px; margin: 0 auto; font-weight: 400; }
+        header p { color: var(--muted); font-size: 1rem; line-height: 1.6; max-width: 600px; margin: 0 auto; font-weight: 400; padding: 0 1rem; }
 
-        .main-container { width: 100%; max-width: 1280px; display: flex; flex-direction: column; align-items: center; gap: 2rem; padding-bottom: 6rem; }
+        .main-container { width: 100%; max-width: 1280px; display: flex; flex-direction: column; align-items: center; gap: 1.5rem; padding-bottom: 4rem; }
 
-        .upload-zone { width: 100%; max-width: 640px; border: 1px dashed var(--border-dark); border-radius: 16px; padding: 3.5rem 2rem; text-align: center; cursor: pointer; transition: all 0.2s ease; background: var(--card); display: flex; flex-direction: column; align-items: center; gap: 1rem; }
+        .upload-zone { width: 100%; max-width: 640px; margin: 0 1rem; border: 1px dashed var(--border-dark); border-radius: 16px; padding: 3rem 1.5rem; text-align: center; cursor: pointer; transition: all 0.2s ease; background: var(--card); display: flex; flex-direction: column; align-items: center; gap: 1rem; }
         .upload-zone:hover { border-color: var(--accent); background: var(--accent-light); }
         .upload-icon { width: 32px; height: 32px; color: var(--accent); stroke-width: 1.5; }
         .upload-zone h2 { font-size: 1rem; font-weight: 600; color: var(--text); }
         .upload-zone p { color: var(--muted); font-size: 0.85rem; font-family: 'JetBrains Mono', monospace; }
 
-        .work-area { display: flex; flex-direction: column; align-items: center; gap: 2rem; width: 100%; padding: 0 2rem; }
+        .work-area { display: flex; flex-direction: column; align-items: center; gap: 1.5rem; width: 100%; padding: 0 1rem; }
 
         .filmstrip-container { width: 100%; max-width: 1240px; overflow-x: auto; padding: 0.5rem 0; scrollbar-width: thin; }
         .filmstrip { display: flex; gap: 0.5rem; padding-bottom: 0.5rem; }
@@ -65,16 +65,16 @@
         .bento-grid { width: 100%; max-width: 1240px; display: grid; grid-template-columns: repeat(12, 1fr); gap: 1rem; }
         .bento-tile { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 1.25rem; display: flex; flex-direction: column; gap: 1rem; }
         
-        .tile-presets { grid-column: span 12; flex-direction: row; align-items: center; flex-wrap: wrap; gap: 1rem; }
+        .tile-presets { grid-column: span 12; flex-direction: column; align-items: flex-start; gap: 1rem; }
         .tile-presets .tile-header { margin-bottom: 0; }
-        .preset-list { display: flex; gap: 0.5rem; flex-wrap: wrap; flex: 1; align-items: center; }
+        .preset-list { display: flex; gap: 0.5rem; flex-wrap: wrap; align-items: center; width: 100%; }
         .preset-btn { display: flex; align-items: center; gap: 0.4rem; padding: 0.4rem 0.8rem; border-radius: 6px; border: 1px solid var(--border); background: var(--bg); cursor: pointer; font-size: 0.8rem; font-weight: 500; color: var(--text-secondary); transition: all 0.15s; }
         .preset-btn:hover { border-color: var(--accent); color: var(--text); transform: translateY(-1px); }
         .preset-dot { width: 10px; height: 10px; border-radius: 50%; border: 1px solid rgba(0,0,0,0.1); flex-shrink: 0; }
         .preset-btn.custom { border-color: var(--accent); color: var(--accent); background: var(--accent-light); }
         .preset-btn .delete-preset { margin-left: 0.5rem; color: var(--muted); opacity: 0.5; }
         .preset-btn .delete-preset:hover { opacity: 1; color: var(--danger); }
-        .save-preset-btn { border: 1px dashed var(--border-dark); color: var(--muted); background: transparent; padding: 0.4rem 0.8rem; border-radius: 6px; font-size: 0.8rem; font-weight: 500; cursor: pointer; display: flex; align-items: center; gap: 0.3rem; }
+        .save-preset-btn { border: 1px dashed var(--border-dark); color: var(--muted); background: transparent; padding: 0.4rem 0.8rem; border-radius: 6px; font-size: 0.8rem; font-weight: 500; cursor: pointer; display: flex; align-items: center; gap: 0.3rem; width: 100%; justify-content: center; margin-top: 0.5rem; }
         .save-preset-btn:hover { border-color: var(--accent); color: var(--accent); }
 
         .tile-1 { grid-column: span 4; } 
@@ -141,16 +141,17 @@
         .toggle-chip.active { background: var(--text); color: var(--bg); border-color: var(--text); }
         .toggle-chip:hover { border-color: var(--text); }
 
+        /* Mobile-Friendly Action Bar */
         .action-bar { width: 100%; max-width: 1240px; display: flex; gap: 0.75rem; justify-content: space-between; align-items: center; flex-wrap: wrap; }
-        .action-buttons { display: flex; gap: 0.5rem; flex-wrap: wrap; }
-        .zip-btn { background: var(--text); color: var(--bg); border: none; padding: 0.75rem 1.25rem; border-radius: 8px; font-weight: 600; cursor: pointer; transition: all 0.2s; display: flex; align-items: center; gap: 0.5rem; font-size: 0.9rem; }
+        .action-buttons { display: flex; gap: 0.5rem; flex-wrap: wrap; flex: 1; min-width: 0; }
+        .zip-btn { background: var(--text); color: var(--bg); border: none; padding: 0.85rem 1.25rem; border-radius: 8px; font-weight: 600; cursor: pointer; transition: all 0.2s; display: flex; align-items: center; justify-content: center; gap: 0.5rem; font-size: 0.9rem; flex: 1; min-width: 150px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); }
         .zip-btn:hover { background: var(--accent); transform: translateY(-1px); }
-        .zip-btn:disabled { opacity: 0.5; cursor: not-allowed; }
-        .pdf-btn { background: transparent; color: var(--text); border: 1px solid var(--border-dark); padding: 0.75rem 1.25rem; border-radius: 8px; font-weight: 600; cursor: pointer; transition: all 0.2s; display: flex; align-items: center; gap: 0.5rem; font-size: 0.9rem; }
+        .zip-btn:disabled { opacity: 0.5; cursor: not-allowed; transform: none; }
+        .pdf-btn { background: transparent; color: var(--text); border: 1px solid var(--border-dark); padding: 0.85rem 1.25rem; border-radius: 8px; font-weight: 600; cursor: pointer; transition: all 0.2s; display: flex; align-items: center; justify-content: center; gap: 0.5rem; font-size: 0.9rem; min-width: 150px; }
         .pdf-btn:hover { background: var(--bg-secondary); }
         
-        .action-btn-group { display: flex; gap: 0.5rem; flex-wrap: wrap; }
-        .ghost-btn { background: transparent; color: var(--muted); border: 1px solid var(--border); padding: 0.75rem 1.25rem; border-radius: 8px; font-weight: 600; cursor: pointer; transition: all 0.2s; display: flex; align-items: center; gap: 0.5rem; font-size: 0.9rem; }
+        .action-btn-group { display: flex; gap: 0.5rem; flex-wrap: wrap; width: 100%; margin-top: 0.5rem; }
+        .ghost-btn { background: transparent; color: var(--muted); border: 1px solid var(--border); padding: 0.85rem 1.25rem; border-radius: 8px; font-weight: 600; cursor: pointer; transition: all 0.2s; display: flex; align-items: center; justify-content: center; gap: 0.5rem; font-size: 0.9rem; flex: 1; }
         .ghost-btn:hover { color: var(--text); border-color: var(--text); }
         .danger-btn:hover { color: var(--danger); border-color: var(--danger); }
 
@@ -174,13 +175,14 @@
             background-position: 0 0, 0 10px, 10px -10px, -10px 0px;
         }
         
-        .compare-container { position: absolute; top: 0; left: 0; width: 100%; height: 100%; overflow: hidden; }
-        .img-raw { width: 100%; height: 100%; object-fit: cover; position: absolute; top: 0; left: 0; }
-        .img-processed-clip { position: absolute; top: 0; left: 0; width: 100%; height: 100%; clip-path: inset(0 0 0 50%); background: var(--bg-secondary); }
-        .img-processed-clip img { width: 100%; height: 100%; object-fit: contain; display: block; }
+        /* Compare Container */
+        .compare-container { position: absolute; top: 0; left: 0; width: 100%; height: 100%; overflow: hidden; cursor: ew-resize; }
+        .img-raw { width: 100%; height: 100%; object-fit: cover; position: absolute; top: 0; left: 0; pointer-events: none; user-select: none; -webkit-user-drag: none; }
+        .img-processed-clip { position: absolute; top: 0; left: 0; width: 100%; height: 100%; clip-path: inset(0 0 0 50%); background: var(--bg-secondary); pointer-events: none; }
+        .img-processed-clip img { width: 100%; height: 100%; object-fit: contain; display: block; pointer-events: none; user-select: none; -webkit-user-drag: none; }
         
-        .compare-handle { position: absolute; top: 0; left: 50%; width: 2px; height: 100%; background: white; box-shadow: 0 0 10px rgba(0,0,0,0.3); pointer-events: none; opacity: 0; transition: opacity 0.2s; z-index: 10; }
-        .preview-wrapper:hover .compare-handle { opacity: 1; }
+        .compare-handle { position: absolute; top: 0; left: 50%; width: 3px; height: 100%; background: white; box-shadow: 0 0 10px rgba(0,0,0,0.3); pointer-events: none; opacity: 0; transition: opacity 0.2s; z-index: 10; }
+        .compare-container:hover .compare-handle, .compare-container.dragging .compare-handle { opacity: 1; }
         .compare-handle::after { content: ''; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 36px; height: 36px; border-radius: 50%; background: white; box-shadow: 0 2px 6px rgba(0,0,0,0.2); background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='%23616161' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='15 18 9 12 15 6'%3E%3C/polyline%3E%3Cpolyline points='9 18 15 12 9 6'%3E%3C/polyline%3E%3C/svg%3E"); background-repeat: no-repeat; background-position: center; background-size: 16px; }
 
         /* IG UI Mockup */
@@ -201,7 +203,7 @@
         .card-footer .info span { font-weight: 600; font-size: 0.85rem; display: block; color: var(--text); }
         .card-footer .info small { color: var(--muted); font-size: 0.7rem; font-weight: 500; font-family: 'JetBrains Mono', monospace; }
         .card-actions { display: flex; gap: 0.25rem; }
-        .action-btn { border: none; padding: 0.4rem 0.6rem; border-radius: 6px; cursor: pointer; font-weight: 600; font-size: 0.7rem; transition: all 0.15s; text-decoration: none; display: inline-flex; align-items: center; gap: 0.25rem; color: var(--muted); background: transparent; border: 1px solid transparent; }
+        .action-btn { border: none; padding: 0.5rem 0.75rem; border-radius: 6px; cursor: pointer; font-weight: 600; font-size: 0.75rem; transition: all 0.15s; text-decoration: none; display: inline-flex; align-items: center; gap: 0.25rem; color: var(--muted); background: transparent; border: 1px solid transparent; }
         .action-btn:hover { background: var(--bg-secondary); color: var(--text); border-color: var(--border); }
         .action-btn svg { stroke-width: 1.5; }
 
@@ -219,7 +221,7 @@
         .modal-content input { font-size: 0.9rem; }
         .modal-actions { display: flex; gap: 0.5rem; justify-content: flex-end; }
 
-        .faq-section { width: 100%; max-width: 800px; margin-top: 6rem; padding: 0 2rem; }
+        .faq-section { width: 100%; max-width: 800px; margin-top: 6rem; padding: 0 1rem; }
         .faq-section h2 { text-align: center; font-family: 'Instrument Serif', serif; font-size: 2.5rem; margin-bottom: 2.5rem; color: var(--text); font-weight: 400; }
         .faq-item { border-bottom: 1px solid var(--border); padding: 1.25rem 0; cursor: pointer; }
         .faq-question { display: flex; justify-content: space-between; align-items: center; font-weight: 500; color: var(--text); font-size: 1.05rem; }
@@ -228,7 +230,7 @@
         .faq-item.active .faq-icon { transform: rotate(45deg); }
         .faq-icon { transition: transform 0.3s ease; color: var(--accent); font-size: 1.5rem; font-weight: 300; }
 
-        footer { width: 100%; max-width: 1280px; padding: 3rem 2rem; margin-top: 6rem; border-top: 1px solid var(--border); text-align: center; color: var(--muted); font-size: 0.85rem; display: flex; flex-direction: column; align-items: center; gap: 0.75rem; }
+        footer { width: 100%; max-width: 1280px; padding: 3rem 1rem; margin-top: 6rem; border-top: 1px solid var(--border); text-align: center; color: var(--muted); font-size: 0.85rem; display: flex; flex-direction: column; align-items: center; gap: 0.75rem; }
         footer strong { color: var(--text); font-weight: 600; }
         .dev-credit { display: inline-flex; align-items: center; gap: 0.4rem; padding: 0.4rem 0.8rem; background: var(--card); border: 1px solid var(--border); border-radius: 100px; margin-top: 0.5rem; font-weight: 500; font-size: 0.8rem; }
         .dev-credit a { color: var(--accent); text-decoration: none; }
@@ -238,7 +240,7 @@
 
         #dropOverlay { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(37, 99, 235, 0.95); z-index: 9999; display: none; align-items: center; justify-content: center; pointer-events: none; }
         #dropOverlay.active { display: flex; }
-        #dropOverlay h2 { color: white; font-size: 2rem; font-weight: 700; font-family: 'Instrument Serif', serif; }
+        #dropOverlay h2 { color: white; font-size: 1.5rem; font-weight: 700; font-family: 'Instrument Serif', serif; text-align: center; padding: 0 2rem; }
 
         .toast-container { position: fixed; bottom: 2rem; left: 50%; transform: translateX(-50%); z-index: 10000; display: flex; flex-direction: column; gap: 0.5rem; align-items: center; pointer-events: none; }
         .toast { background: var(--text); color: var(--bg); padding: 0.75rem 1.25rem; border-radius: 8px; font-weight: 500; font-size: 0.85rem; opacity: 0; transform: translateY(20px); transition: all 0.3s ease; display: flex; align-items: center; gap: 0.5rem; max-width: 90vw; box-shadow: 0 4px 12px rgba(0,0,0,0.1); }
@@ -249,8 +251,20 @@
         .spinner { width: 14px; height: 14px; border: 2px solid rgba(255,255,255,0.3); border-radius: 50%; border-top-color: white; animation: spin 1s ease-in-out infinite; }
         @keyframes spin { to { transform: rotate(360deg); } }
 
+        /* Mobile Responsive Adjustments */
         @media (min-width: 768px) {
             .gallery:not(.ig-grid-view) { grid-template-columns: repeat(2, 1fr); gap: 1.5rem; }
+            header h1 { font-size: 4.5rem; }
+            nav { padding: 1.25rem 2rem; }
+            .upload-zone { margin: 0; }
+            header p { font-size: 1.1rem; }
+            .work-area { padding: 0 2rem; }
+            header { padding: 5rem 2rem 4rem; }
+            .action-btn-group { width: auto; margin-top: 0; }
+            .ghost-btn { flex: 0 1 auto; }
+            #dropOverlay h2 { font-size: 2rem; }
+            .save-preset-btn { width: auto; }
+            .tile-presets { flex-direction: row; align-items: center; }
         }
         @media (min-width: 1024px) {
             .gallery:not(.ig-grid-view) { grid-template-columns: repeat(auto-fill, minmax(380px, 1fr)); }
@@ -509,8 +523,8 @@
             <p style="font-size: 0.85rem; color: var(--muted);">Saves your current background, color, thickness, radius, and adjustments.</p>
             <input type="text" id="presetNameInput" placeholder="e.g. Nike Brand Campaign">
             <div class="modal-actions">
-                <button class="ghost-btn" id="cancelPresetBtn">Cancel</button>
-                <button class="zip-btn" id="confirmPresetBtn">Save Preset</button>
+                <button class="ghost-btn" id="cancelPresetBtn" style="flex: 0 1 auto;">Cancel</button>
+                <button class="zip-btn" id="confirmPresetBtn" style="flex: 0 1 auto;">Save Preset</button>
             </div>
         </div>
     </div>
@@ -680,7 +694,6 @@
         });
 
         function renderCustomPresets() {
-            // Remove old custom buttons
             document.querySelectorAll('.preset-btn.custom').forEach(btn => btn.remove());
             
             customPresets.forEach((config, index) => {
@@ -703,7 +716,6 @@
                     applyPreset(config);
                     showToast(`${config.name} applied!`, 'success');
                 });
-                // Insert before the save button
                 presetListContainer.insertBefore(btn, openSavePresetBtn);
             });
         }
@@ -1222,26 +1234,23 @@
 
         // --- Global Compare Slider Drag Logic ---
         let isDragging = false;
-        let activeWrapper = null;
+        let activeContainer = null;
         let activeClip = null;
         let activeHandle = null;
 
         document.addEventListener('mousedown', (e) => {
-            if (e.target.classList.contains('compare-handle') || e.target.closest('.compare-handle')) {
-                activeWrapper = e.target.closest('.preview-wrapper');
-                if (!activeWrapper) return;
-                activeClip = activeWrapper.querySelector('.img-processed-clip');
-                activeHandle = activeWrapper.querySelector('.compare-handle');
+            const container = e.target.closest('.compare-container');
+            if (!container) return;
+            
+            activeContainer = container;
+            activeClip = container.querySelector('.img-processed-clip');
+            activeHandle = container.querySelector('.compare-handle');
+            
+            if (activeClip && activeHandle) {
                 isDragging = true;
-                e.preventDefault(); // Prevent text selection
-            } else if (e.target.closest('.compare-container')) {
-                // Allow clicking anywhere in the container to move the slider instantly
-                activeWrapper = e.target.closest('.preview-wrapper');
-                if (!activeWrapper) return;
-                activeClip = activeWrapper.querySelector('.img-processed-clip');
-                activeHandle = activeWrapper.querySelector('.compare-handle');
-                isDragging = true;
+                activeContainer.classList.add('dragging');
                 updateSlider(e.clientX);
+                e.preventDefault();
             }
         });
 
@@ -1251,32 +1260,43 @@
         });
 
         document.addEventListener('mouseup', () => {
-            isDragging = false;
+            if (isDragging) {
+                isDragging = false;
+                if (activeContainer) activeContainer.classList.remove('dragging');
+            }
         });
 
-        // Touch support
         document.addEventListener('touchstart', (e) => {
-            if (e.target.classList.contains('compare-handle') || e.target.closest('.compare-handle') || e.target.closest('.compare-container')) {
-                activeWrapper = e.target.closest('.preview-wrapper');
-                if (!activeWrapper) return;
-                activeClip = activeWrapper.querySelector('.img-processed-clip');
-                activeHandle = activeWrapper.querySelector('.compare-handle');
+            const container = e.target.closest('.compare-container');
+            if (!container) return;
+            
+            activeContainer = container;
+            activeClip = container.querySelector('.img-processed-clip');
+            activeHandle = container.querySelector('.compare-handle');
+            
+            if (activeClip && activeHandle) {
                 isDragging = true;
+                activeContainer.classList.add('dragging');
+                updateSlider(e.touches[0].clientX);
             }
         });
 
         document.addEventListener('touchmove', (e) => {
             if (!isDragging) return;
+            e.preventDefault();
             updateSlider(e.touches[0].clientX);
         }, { passive: false });
 
         document.addEventListener('touchend', () => {
-            isDragging = false;
+            if (isDragging) {
+                isDragging = false;
+                if (activeContainer) activeContainer.classList.remove('dragging');
+            }
         });
 
         function updateSlider(clientX) {
-            if (!activeWrapper || !activeClip || !activeHandle) return;
-            const rect = activeWrapper.getBoundingClientRect();
+            if (!activeContainer || !activeClip || !activeHandle) return;
+            const rect = activeContainer.getBoundingClientRect();
             let x = clientX - rect.left;
             let percent = (x / rect.width) * 100;
             percent = Math.max(0, Math.min(100, percent));
@@ -1313,6 +1333,7 @@
             showToast('Contact Sheet downloaded!', 'success');
         }
 
+        // --- MOBILE FRIENDLY ZIP DOWNLOAD ---
         async function downloadAllAsZip() {
             if (currentImages.length === 0) return;
             downloadAllBtn.innerHTML = '<div class="spinner"></div> Processing...';
@@ -1401,13 +1422,34 @@
                 const zipPercent = Math.round(meta.percent);
                 progressPercent.innerText = `${zipPercent}%`;
                 progressBarFill.style.width = `${zipPercent}%`;
-            }).then(function(content) {
-                const link = document.createElement('a');
-                link.href = URL.createObjectURL(content);
-                link.download = "FitFrame_Bulk_Export.zip";
-                link.click();
-                URL.revokeObjectURL(link.href);
-                showToast('ZIP downloaded successfully!', 'success');
+            }).then(async function(content) {
+                const fileName = "FitFrame_Bulk_Export.zip";
+                const file = new File([content], fileName, { type: "application/zip" });
+
+                // MOBILE FRIENDLY SHARE: If on mobile, use Web Share API to push to native share sheet
+                if (navigator.canShare && navigator.canShare({ files: [file] })) {
+                    try {
+                        await navigator.share({
+                            files: [file],
+                            title: 'FitFrame Bulk Export',
+                            text: 'Here are your resized images!'
+                        });
+                        showToast('ZIP shared successfully!', 'success');
+                    } catch (err) {
+                        if (err.name !== 'AbortError') {
+                            console.error("Sharing failed:", err);
+                            showToast('Sharing failed. Try downloading individually.', 'error');
+                        }
+                    }
+                } else {
+                    // DESKTOP FALLBACK: Download directly
+                    const link = document.createElement('a');
+                    link.href = URL.createObjectURL(content);
+                    link.download = fileName;
+                    link.click();
+                    URL.revokeObjectURL(link.href);
+                    showToast('ZIP downloaded successfully!', 'success');
+                }
             }).finally(() => {
                 downloadAllBtn.innerHTML = '<svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" /></svg> Download All as ZIP';
                 downloadAllBtn.disabled = false;
